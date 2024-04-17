@@ -21,7 +21,7 @@ jobs:
           npx eslint --fix .
           
       - name: Run and collect coverage
-        run: npx nyc --reporter=html --reporter=text npm run test
+        run: npx nyc --all --reporter=html --reporter=text npm run test
 
       - name: Upload coverage
         uses: actions/upload-artifact@v2
